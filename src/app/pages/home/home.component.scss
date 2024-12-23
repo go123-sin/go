@@ -1,0 +1,81 @@
+:host {
+  // position: relative;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-align: center;
+  }
+}
+
+$anchoDedo: 150px;
+
+.dedito {
+  position: absolute;
+  background-image: url("/dedo.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $anchoDedo;
+  width: $anchoDedo;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  // &:hover {
+  //   box-shadow:
+  //   0 0 5px #ff00ff,
+  //   0 0 10px #ff00ff,
+  //   0 0 20px #ff00ff,
+  //   0 0 40px #ff00ff,
+  //   0 0 80px #ff00ff,
+  //   0 0 120px #ff00ff,
+  //   0 0 200px #ff00ff;
+  // }
+  .regalo {
+    margin-top: -40px;
+    button {
+      --mdc-filled-button-container-height: 30px;
+      min-width: 160px;
+    }
+  }
+  .pies {
+    background-image: url("/pies.gif");
+    width: $anchoDedo;
+    height: calc($anchoDedo / 3);
+    background-size: cover;
+    margin-bottom: -20px;
+    z-index: -1;
+  }
+}
+
+.pass {
+  mat-form-field {
+    min-width: 480px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :host {
+    width: 100%;
+    padding: 16px;
+  }
+  .pass {
+    width: 100%;
+    mat-form-field {
+      min-width: 100%;
+    }
+  }
+  $anchoDedo: 100px;
+}
+
+
+.numberRegalos {
+  position: absolute;
+  top: 0px;
+  right: 32px;
+}

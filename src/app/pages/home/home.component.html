@@ -1,0 +1,49 @@
+@if(contrasenaValida) { @if(!(emitterSaludoInicial | async)) {
+<h1>{{ textos | typing : emitterSaludoInicial | async }}</h1>
+} @if (attempsEnded && !(emitterAfterButton | async)) {
+<h2>{{ textoBoton | typing : emitterAfterButton | async }}</h2>
+<!-- mentiras ya... -->
+} @if ((emitterSaludoInicial | async) && !showDedo) {
+<button
+  class="button"
+  mat-flat-button
+  (mouseenter)="setPosition(ref)"
+  [disabled]="attempsEnded && !(emitterAfterButton | async)"
+  #ref
+  (click)="showDedo = true; moveRegalo()"
+>
+  Empecemos <mat-icon>arrow_forward_ios</mat-icon>
+</button> } @if (showDedo) {
+<div class="dedito" (click)="moviendoR = !moviendoR">
+  <div class="regalo">
+    <button
+      mat-flat-button
+      [disabled]="regalos.length === 0"
+      (click)="
+        $event.preventDefault();
+        moviendoR || regalos.length === 0 ? null : openRegalo()
+      "
+    >
+      {{ regalos.length > 0 ? "Abrir" : "Se acabaron" }}
+    </button>
+  </div>
+  <div class="pies"></div>
+</div>
+} } @if(!contrasenaValida){
+<div class="pass">
+  <mat-form-field appearance="outline">
+    <mat-label>Debes colocar la contraseña antes de entrar</mat-label>
+    <input
+      matInput
+      type="password"
+      placeholder="A ver..."
+      (input)="validatePassword($event)"
+    />
+  </mat-form-field>
+</div>
+}
+@if((emitterSaludoInicial | async)){
+  <div class="numberRegalos">
+    <h2>{{regalos.length}} 🎁</h2>
+  </div>
+}

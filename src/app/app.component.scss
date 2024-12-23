@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  .counter {
+    position: absolute;
+    bottom: 0px;
+    h3 {
+      text-align: center;
+      color: white;
+    }
+  }
+}
