@@ -35,8 +35,8 @@ export const regalos: Surprise[] = [
   {
     type: 'tiktok',
     url: tiktokLoco,
-    description: 'Un tiktok chapa de un recuerdo simple pero bonito jaja',
-    title: 'Me acuerdo de cuando vimos este video en el carro yendo a la fiesta jaja que chapa, me acuerdo de como te reías, yo casi me cago de la risa jaja.',
+    title: 'Un tiktok chapa de un recuerdo simple pero bonito jaja',
+    description: 'Me acuerdo de cuando vimos este video en el carro yendo a la fiesta jaja que chapa, me acuerdo de como te reías, yo casi me cago de la risa jaja.',
   },
   {
     type: 'imagen',
