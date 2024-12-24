@@ -32,7 +32,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build Angular app
-        run: npm run build --configuration=production --base-href="./" --deploy-url="./"
+        run: npm run build:prod
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
