@@ -83,7 +83,7 @@ export const regalos: Surprise[] = [
     title: 'Una cancioncita',
     description:
       'Aunque no lo creas le presto mucha atención a cada canción que pones, y esta es una de ellas, me encanta, hace que todo fluya aún mas natural de lo que ya es. 😏',
-    type: 'imagen',
+    type: 'cancion',
     url: bellaquita,
   },
 ];
