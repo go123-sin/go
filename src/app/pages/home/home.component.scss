@@ -14,7 +14,7 @@ $anchoDedo: 150px;
 
 .dedito {
   position: absolute;
-  background-image: url("/dedo.webp");
+  background-image: url("./assets/dedo.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +44,7 @@ $anchoDedo: 150px;
     }
   }
   .pies {
-    background-image: url("/pies.gif");
+    background-image: url("./assets/pies.gif");
     width: $anchoDedo;
     height: calc($anchoDedo / 3);
     background-size: cover;

@@ -9,6 +9,7 @@ import { regalos } from './regalos';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { textoBoton, textoInicial } from './texto-inicial';
+import * as crypto from 'crypto-js';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -29,7 +30,7 @@ export class HomeComponent {
   textos = textoInicial.split('\n');
   textoBoton = textoBoton.split('\n');
   attempsButton = 0;
-  maxAttempsButton = 3;
+  maxAttempsButton = 8;
   attempsEnded = false;
   contrasenaValida = false;
   showDedo = false;
@@ -140,6 +141,6 @@ export class HomeComponent {
   }
 
   validatePassword(e: any) {
-    this.contrasenaValida = e.target?.value === 'arepa';
+    this.contrasenaValida = crypto.SHA512(e.target?.value).toString() === '21ec56c2152eec59fc2bd9019502148f69ab034b6e75444881581cdb98fe253f901fe7c14991696e52324eba398529eb10275ed44e43143825d6a40d39e2aeec';
   }
 }
